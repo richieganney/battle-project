@@ -1,6 +1,11 @@
 <html>
-  <body style="background-color:maroon;">
+  <body style="background-color:rgb(4, 215, 252);">
     <h1><center><%= @player_1 %> vs. <%= @player_2 %></center></h1>
-      <p>Player 2 HP</p>
+      <h3><%=@player_2%> HP</h3>
+      <form action="/attack" method="get">
+        <div class="button">
+          <button type="submit">Karate Chopskies!</button>
+        </div>
+      </form>
   </body>
  </html>
