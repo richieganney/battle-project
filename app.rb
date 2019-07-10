@@ -4,7 +4,11 @@ require 'sinatra'
 class Battle < Sinatra::Base
 
     get '/' do
-        "Testing infrastructure working!"
+      erb(:intro)
+    end
+
+    get '/players' do
+      erb(:players)
     end
 
     run! if app_file == $0
