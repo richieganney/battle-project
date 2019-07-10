@@ -21,4 +21,12 @@ feature 'Entering players' do
     click_button 'Submit'
     expect(page).to have_content 'Richie vs. Charlie'
   end
+
+  feature 'See Player 2 hit points' do
+    scenario 'it allows Player 1 to see Player 2`s hit points' do
+      visit('/play')
+      expect(page).to have_content 'Player 2 HP'
+    end
+  end
+  
 end
