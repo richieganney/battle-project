@@ -16,8 +16,8 @@ end
 feature 'Entering players' do
   scenario 'allows to enter names and be greeted on the following page' do
     visit('/players')
-    fill_in :player_1_name, with: 'Richie'
-    fill_in :player_2_name, with: 'Charlie'
+    fill_in :player_1, with: 'Richie'
+    fill_in :player_2, with: 'Charlie'
     click_button 'Submit'
     expect(page).to have_content 'Richie vs. Charlie'
   end
