@@ -1,9 +1,8 @@
 require_relative = 'player'
 
-class Game do
+class Game 
 
   def attack(player)
      player.hit
   end
-
 end
