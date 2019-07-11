@@ -34,4 +34,13 @@ feature 'Entering players' do
     end
   end
 
+  feature 'Reduce players HP after attack' do
+    scenario 'attack player 2' do
+      sign_in_and_play
+      click_button 'Karate Chopskies'
+      expect(page).to have_content "Charlie HP: 85"
+      expect(page).to_not have_content "Charlie HP: 100"
+    end
+  end
+
 end
